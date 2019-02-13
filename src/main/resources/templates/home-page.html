@@ -1,13 +1,39 @@
 <!DOCTYPE hmtl>
 <html xmlns:th="http://www.thymeleaf.org" lang="pl-PL">
 <head>
-	<title>Ozii Service Home Page</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" th:href="@{/css/demo.css}" />
-	<link rel="stylesheet"
+<title>Ozii Service Home Page</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/home.css}" />
+<link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
 </head>
 <body>
-xD
+	<div class="container">
+		<header class="header">
+			<img th:src="@{/img/header-digital-marketing1.jpg}" alt="Header banner" class="header__logo">
+			
+		</header>
+		<div class="scores">
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Nick</th>
+						<th scope="col">Score</th>
+						<th scope="col">Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="tempPlayer : ${players}">
+						<td></td>
+						<td th:text="${tempPlayer.user.nick}"/>
+						<td th:text="${tempPlayer.score}"/>
+						<td th:text="${tempPlayer.lastGameDate}"/>
+					</tr>
+				</tbody>
+			</table>
+		
+		</div>
+	</div>
 </body>
 </html>

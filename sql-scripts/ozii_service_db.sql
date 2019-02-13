@@ -18,6 +18,7 @@ CREATE TABLE `user`(
 create table `player`(
 	`id` int(11) not null auto_increment,
     `score` int(11) default null,
+    `date` date DEFAULT NULL,
     `user_id` int(11) default null,
     primary key(`id`),
     key `FK_user_id` (`user_id`),
@@ -30,6 +31,6 @@ insert into `user` values
 (3, 'Janusz', 'Kowalski', 40, 'snowMoon');
 
 insert into `player` values
-(1, 101, 2),
-(2, 1000, 1),
-(3, 255, 3);
+(1, 101, '2018-09-02', 2),
+(2, 1000, '2018-09-09',1),
+(3, 255, '2018-09-16', 3);
