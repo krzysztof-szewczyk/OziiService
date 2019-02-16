@@ -25,7 +25,6 @@ public class HomeController {
 		List<Player> thePlayers = thePlayerService.findAll();
 		System.out.println("SIZE:" + thePlayers.size());
 		theModel.addAttribute("players", thePlayers);
-		System.out.println("SCORE: " + thePlayers.get(1).getLastGameDate());
 		
 		return "/home-page";
 	}
