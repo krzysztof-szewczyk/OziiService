@@ -1,8 +1,9 @@
 .header {
   align-items: stretch;}
   .header__logo {
-    max-width:100%;
-	object-fit: contain;}
+    margin-left: 5rem;
+    height: 4.5rem;
+    display: block;}
     
 table {
     counter-reset: rowNumber-1;
@@ -10,6 +11,8 @@ table {
 
 table tr {
     counter-increment: rowNumber;
+    color: black;
+    background-color: !transparent;
 }
 
 table tr td:first-child::before {
@@ -17,6 +20,38 @@ table tr td:first-child::before {
     min-width: 1em;
     margin-right: 0.5em;
 }
+
+
+
+.table-striped>tbody>tr:nth-child(odd)>td{
+   background: rgba(255,255,255,0.7);
+}
+
+.table-striped>tbody>tr:nth-child(even)>td {
+	background: rgba(229,244,255, 0.8);
+}
+
+i.fas.fa-medal {
+	visibility: hidden;
+}
+
+.table-striped>tbody>tr:nth-child(1)>td:nth-child(1){
+   background-color: gold;
+}
+
+.table-striped>tbody>tr:nth-child(-n+3)>td>i.fas.fa-medal{
+	visibility: visible;
+}
+
+.table-striped>tbody>tr:nth-child(2)>td:nth-child(1){
+   background-color: silver;
+}
+
+.table-striped>tbody>tr:nth-child(3)>td:nth-child(1){
+   background-color: peru;
+}
+
+
 body {
   background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
   background-size: cover;
