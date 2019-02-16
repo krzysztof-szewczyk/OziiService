@@ -23,13 +23,6 @@ table tr td:first-child::before {
 }
 
 
-
-.carousel-inner, .carousel{
-  max-width: 100px;
-  max-height: 100px !important;
-  margin-left: 0;
-}
-
 .table-striped>tbody>tr:nth-child(odd)>td{
    background: rgba(255,255,255,0.7);
 }
@@ -58,6 +51,9 @@ i.fas.fa-medal {
    background-color: peru;
 }
 
+input[type="text"] {
+    box-sizing: border-box;
+}
 
 body {
   background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
