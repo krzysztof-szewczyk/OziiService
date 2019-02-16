@@ -8,6 +8,16 @@
     
 table {
     counter-reset: rowNumber-1;
+    border-radius: 25px;
+}
+
+.table__title {
+	background: rgba(255,255,255,0.6);
+	border-radius: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 5px;
+	align-content: center;
 }
 
 table tr {
