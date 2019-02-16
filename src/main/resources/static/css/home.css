@@ -1,5 +1,6 @@
 .header {
-  align-items: stretch;}
+  align-items: stretch;
+  background-color: white}
   .header__logo {
     margin-left: 5rem;
     height: 4.5rem;
