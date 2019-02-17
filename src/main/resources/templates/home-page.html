@@ -21,11 +21,13 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<header class="header">
-			<img th:src="@{img/fox.png}" alt="Header banner" class="header__logo">
-		</header>
 		<div class="row">
-			<div class="col-2">
+			<div class="col-12 header">
+			<img th:src="@{img/fox.png}" alt="Header banner" class="header__logo">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2 left__column">
 				<div class="row">
 					<div class="col">Username:</div>
 					<input type="text">
@@ -35,6 +37,7 @@
 					<input type="text">
 				</div>
 				<button>Sign in</button>
+				
 			</div>
 			<div class="col-8">
 				<table class="table table-striped">
@@ -50,6 +53,7 @@
 						</tr>
 					</thead>
 					<tbody>
+					<!-- th:object="${tempPlayer} -->
 						<tr th:each="tempPlayer : ${players}">
 							<td><i class="fas fa-medal"></i></td>
 							<td th:text="${tempPlayer.user.nick}" />
@@ -60,7 +64,7 @@
 				</table>
 
 			</div>
-			<div class="col-2">
+			<div class="col-2 right__column">
 				<div id="techStackCarousel" class="carousel slide"
 					data-ride="carousel">
 					<!--

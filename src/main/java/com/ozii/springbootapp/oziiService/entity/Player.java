@@ -18,6 +18,11 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name="player")
 public class Player {
@@ -39,8 +44,16 @@ public class Player {
 	@JoinColumn(name="user_id")
 	private User user;
 
+	public Player(int id, int score, Date lastGameDate, User user) {
+		this.id = id;
+		this.score = score;
+		this.lastGameDate = lastGameDate;
+		this.user = user;
+	}
+
 	public Player() {
 	}
+	
 
 	/**
 	 * @return the id

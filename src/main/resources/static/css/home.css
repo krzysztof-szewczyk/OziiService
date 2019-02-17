@@ -1,14 +1,37 @@
-.header {
-  align-items: stretch;
-  background: rgba(255,255,255,0.6);}
-  .header__logo {
-    margin-left: 5rem;
-    height: 4.5rem;
-    display: block;}
-    
+html, body{
+	min-height:100vh;	
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #b3daff, #A5B0B3);
+  background-size: cover;
+  background-repeat: no-repeat;}
+
+.header  {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+.header__logo {
+	margin-left: 5rem;
+	height: 4.5rem;
+	display: block;
+}
+
 table {
-    counter-reset: rowNumber-1;
-    border-radius: 25px;
+	counter-reset: rowNumber-1;
+	border-radius: 25px;
+}
+
+.left__column {
+	background: rgba(255, 255, 255, 0.6);
+	height: calc(100% - 45px);
+	height: -o-calc(100% - 45px); /* opera */
+	height: -webkit-calc(100% - 45px); /* google, safari */
+	height: -moz-calc(100% - 45px); /* firefox */
+}
+
+.right__column {
+	background: rgba(255, 255, 255, 0.6);
 }
 
 .table__title {
@@ -18,6 +41,11 @@ table {
 	padding-bottom: 5px;
 	margin: 5px;
 	align-content: center;
+}
+
+input{
+	width: 100%;
+	max-width: 200px;
 }
 
 table tr {
@@ -62,11 +90,6 @@ i.fas.fa-medal {
 }
 
 input[type="text"] {
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
-body {
-  background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: calc(100vh - 2 * 4vw); }
