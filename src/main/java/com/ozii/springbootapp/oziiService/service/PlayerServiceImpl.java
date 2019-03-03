@@ -16,7 +16,6 @@ public class PlayerServiceImpl implements PlayerService {
 	
 	public List<Player> findAll(){
 		List<Player> thePlayers = thePlayerRepository.findAllByOrderByScoreDesc();
-		
 		return thePlayers;
 	};
 }
