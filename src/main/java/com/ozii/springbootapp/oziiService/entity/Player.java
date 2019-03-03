@@ -23,6 +23,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Data
 @Entity
 @Table(name="player")
 public class Player {
@@ -44,79 +45,9 @@ public class Player {
 	@JoinColumn(name="user_id")
 	private User user;
 
-	public Player(int id, int score, Date lastGameDate, User user) {
-		this.id = id;
-		this.score = score;
-		this.lastGameDate = lastGameDate;
-		this.user = user;
-	}
-
-	public Player() {
-	}
-	
-
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	/**
-	 * @return the score
-	 */
-	public int getScore() {
-		return score;
-	}
-
-	/**
-	 * @param score the score to set
-	 */
-	public void setScore(int score) {
-		this.score = score;
-	}
-
-	/**
-	 * @return the lastGameDate
-	 */
-	public Date getLastGameDate() {
-		return lastGameDate;
-	}
-
-	/**
-	 * @param lastGameDate the lastGameDate to set
-	 */
-	public void setLastGameDate(Date lastGameDate) {
-		this.lastGameDate = lastGameDate;
-	}
-
-	/**
-	 * @return the user
-	 */
-	public User getUser() {
-		return user;
-	}
-
-	/**
-	 * @param user the user to set
-	 */
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
-		return "Player [id=" + id + ", score=" + score + ", lastGameDate=" + lastGameDate + ", user=" + user + "]";
+		return "Player [id=" + id + ", sdddcore=" + score + ", lastGameDate=" + lastGameDate + ", user=" + user + "]";
 	}
 	
 	

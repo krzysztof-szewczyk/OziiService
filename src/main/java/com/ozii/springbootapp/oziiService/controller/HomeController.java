@@ -23,7 +23,6 @@ public class HomeController {
 	public String login(Model theModel) {
 		
 		List<Player> thePlayers = thePlayerService.findAll();
-		System.out.println("SIZE:" + thePlayers.size());
 		theModel.addAttribute("players", thePlayers);
 		
 		return "/home-page";
